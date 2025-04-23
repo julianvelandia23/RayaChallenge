@@ -112,4 +112,38 @@ La aplicación debería compilarse e instalarse en el emulador/simulador/disposi
 
 *(Las decisiones clave sobre tecnología y arquitectura se han integrado en las secciones anteriores. Se priorizó KMP con Compose para máxima reutilización de código, Clean Architecture para mantenibilidad y testabilidad, y se seleccionaron librerías robustas y estándar en el ecosistema KMP como Ktor, SQLDelight y Koin).*
 
+**Inicialización de Saldos por Defecto:**
+
+Para asegurar que la aplicación sea funcional inmediatamente después de la instalación, implemente un mecanismo para cargar saldos iniciales si la base de datos está vacía. Esto se maneja con la siguiente lógica:
+
+```kotlin
+/**
+ * Verifica si existen saldos en la base de datos local. Si no existen
+ * (ej. primera vez que se abre la app), inserta unos saldos por defecto
+ * para ARS, USD, BTC y ETH. Se ejecuta en un contexto de IO.
+ */
+suspend fun initializeDefaultBalancesIfNeeded() {
+    withContext(Dispatchers.IO) {
+        // Verifica si ya existe algún registro (usando SQLDelight)
+        val result = queries.hasAnyBalance().executeAsOneOrNull()
+
+        if (result == null) {
+            val defaultBalances = listOf(
+                // Asumiendo que Balance es una data class o entidad
+                Balance(icon = "🇦🇷", currencyCode = "ARS", amount = 52000.0),
+                Balance(icon = "🇺🇸", currencyCode = "USD", amount = 2000.0),
+                Balance(icon = "₿", currencyCode = "BTC", amount = 0.01321),
+                Balance(icon = "Ξ", currencyCode = "ETH", amount = 1.0911)
+            )
+            // Intenta insertar los balances 
+            try {
+                insertOrUpdateBalances(defaultBalances)
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+    }
+}
+
+
 ---
