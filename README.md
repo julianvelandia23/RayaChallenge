@@ -127,7 +127,6 @@ suspend fun initializeDefaultBalancesIfNeeded() {
 
         if (result == null) {
             val defaultBalances = listOf(
-                // Asumiendo que Balance es una data class o entidad
                 Balance(icon = "🇦🇷", currencyCode = "ARS", amount = 52000.0),
                 Balance(icon = "🇺🇸", currencyCode = "USD", amount = 2000.0),
                 Balance(icon = "₿", currencyCode = "BTC", amount = 0.01321),
