@@ -1,0 +1,21 @@
+
+CREATE TABLE BalanceEntity (
+    currencyCode TEXT NOT NULL PRIMARY KEY,
+    flag TEXT NOT NULL,
+    amount REAL NOT NULL
+);
+
+
+insertOrReplaceBalance:
+INSERT OR REPLACE INTO BalanceEntity(currencyCode, flag, amount)
+VALUES (?, ?, ?);
+
+selectAllBalances:
+SELECT * FROM BalanceEntity ORDER BY currencyCode;
+
+
+selectBalanceByCode:
+SELECT * FROM BalanceEntity WHERE currencyCode = ?;
+
+hasAnyBalance:
+SELECT 1 FROM BalanceEntity LIMIT 1;

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <string name="bottom_sheet_confirm_title">Confirmar Conversión</string>
+    <string name="bottom_sheet_convert_label">Convertir:</string>
+    <string name="bottom_sheet_receive_label">Recibirás (aprox):</string>
+    <string name="bottom_sheet_rate_label">Cotización: %1$s</string>
+    <string name="bottom_sheet_cancel_button">Cancelar</string>
+    <string name="bottom_sheet_confirm_button">Confirmar</string>
+
+    <string name="conversion_title">Conversión de Moneda</string>
+    <string name="from_label">De:</string>
+    <string name="to_label">A:</string>
+    <string name="amount_placeholder">Monto a convertir</string>
+
+    <string name="status_success">Éxito</string>
+    <string name="status_error">Error</string>
+
+    <string name="label_close">Cerrar</string>
+    <string name="content_description_change_currency">Intercambiar monedas</string>
+    <string name="label_mount_converter">Monto a convertir</string>
+    <string name="label_amount_receive">Recibirás aprox %1$s</string>
+    <string name="label_button_continue">Continuar</string>
+    <string name="conversion_success_message">¡Conversión realizada con éxito!</string>
+    <string name="conversion_error_message">Error al procesar la conversión.</string>
+    <string name="exchange_rate_display">Cotización: 1 %1$s = %2$s</string>
+    <string name="loading_rate_message">Loading...</string>
+    <string name="conversion_value">Convertiste: %1$s a %2$s</string>
+
+
+    <string name="my_balances_title">Mis Balances</string>">
+    <string name="last_transactions_title">Últimas transacciones</string>
+    <string name="empty_transactions">Aún no has realizado ninguna transacción.</string>
+    <string name="create_transaction">Realizar transacciones</string>
+
+</resources>

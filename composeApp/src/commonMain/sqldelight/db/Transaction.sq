@@ -1,0 +1,18 @@
+CREATE TABLE TransactionEntity (
+    uuid TEXT NOT NULL UNIQUE,
+    sourceCurrencyCode TEXT NOT NULL,
+    sourceAmount REAL NOT NULL,
+    targetCurrencyCode TEXT NOT NULL,
+    targetAmount REAL NOT NULL,
+    transactionTimestamp INTEGER NOT NULL
+);
+
+insertTransaction:
+INSERT INTO TransactionEntity(uuid, sourceCurrencyCode, sourceAmount, targetCurrencyCode, targetAmount, transactionTimestamp)
+VALUES (?, ?, ?, ?, ?, ?);
+
+
+selectAllTransactions:
+SELECT *
+FROM TransactionEntity
+ORDER BY transactionTimestamp DESC;
