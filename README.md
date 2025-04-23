@@ -5,7 +5,19 @@ Aplicación móvil multiplataforma (Android & iOS) challenge técnico Raya.
 
 
 
-https://github.com/user-attachments/assets/2a76b212-f4ef-4604-942c-e943698cb51b
+<table>
+  <tr>
+    <td align="center">
+      <strong>IOS Demo</strong><br>
+      <img src="https://github.com/user-attachments/assets/2a76b212-f4ef-4604-942c-e943698cb51b" alt="Android Demo GIF" width="300">
+    </td>
+    <td align="center">
+      <strong>Android Demo</strong><br>
+      <img src="https://github.com/user-attachments/assets/03938a93-57e9-4f5c-8c2e-9399e546c20a" alt="iOS Demo GIF" width="300">
+    </td>
+  </tr>
+</table>
+
 
 
 
