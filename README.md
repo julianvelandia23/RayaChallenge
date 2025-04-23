@@ -3,6 +3,12 @@
 
 Aplicación móvil multiplataforma (Android & iOS) challenge técnico Raya.
 
+
+
+https://github.com/user-attachments/assets/2a76b212-f4ef-4604-942c-e943698cb51b
+
+
+
 ## ✨ Features
 
 * Visualización de saldos para ARS, USD, BTC y ETH.
